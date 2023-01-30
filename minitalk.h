@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   mintalk.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/01/30 15:40:18 by jpelaez-         ###   ########.fr       */
+/*   Created: 2023/01/30 14:44:14 by jpelaez-          #+#    #+#             */
+/*   Updated: 2023/01/30 14:48:55 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-int	main(int argc, char **argv)
-{
-	int pid;
-	char *str;
+# include <signal.h>
+# include <unistd.h>
 
-	if (argc == 3)
-	{
-		pid = argv[1];
-		str = argv[2];
-	}
-	else
-		ft_printf("Just writ the PID and the message as arguments \n");
-}
+#endif
