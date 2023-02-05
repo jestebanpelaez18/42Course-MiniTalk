@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-int bit_to_server(char *str, int n_pid, size_t len)
+void bit_to_server(char *str, int n_pid, size_t len)
 {
 	size_t i;
 	int bit_counter;
@@ -21,9 +21,9 @@ int bit_to_server(char *str, int n_pid, size_t len)
 	while(i <= len)
 	{
 		bit_counter=0;
-		while(bit_counter < 8)
+		while(bit_counter < 7)
 		{
-			if ((str[i] & (1 << bit_counter)) == 1)
+			if (((str[i] >> bit_counter) & 1) == 1)
 				kill(n_pid,SIGUSR1);
 			else
 				kill(n_pid,SIGUSR2);
