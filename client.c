@@ -12,7 +12,27 @@
 
 #include "minitalk.h"
 
-int bit_to_server()
+int bit_to_server(char *str, int n_pid, size_t len)
+{
+	size_t i;
+	int bit_counter;
+
+	i=0;
+	while(i <= len)
+	{
+		bit_counter=0;
+		while(bit_counter < 8)
+		{
+			if ((str[i] & (1 << bit_counter)) == 1)
+				kill(n_pid,SIGUSR1);
+			else
+				kill(n_pid,SIGUSR2);
+			bit_counter++;
+		}
+		i++;
+	}
+
+}
 
 
 int	main(int argc, char **argv)
@@ -24,7 +44,7 @@ int	main(int argc, char **argv)
 	{
 		pid = ft_atoi(argv[1]);
 		str = argv[2];
-		bit_to_server();
+		bit_to_server(str, pid, ft_strlen(str));
 	}
 	else
 		ft_printf("Just write the PID and the message as arguments \n");
