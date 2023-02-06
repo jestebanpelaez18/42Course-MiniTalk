@@ -6,34 +6,32 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/02 16:23:22 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:55:00 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void bit_to_server(char *str, int n_pid, size_t len)
+void	bit_to_server(char *str, int n_pid, size_t len)
 {
-	size_t i;
-	int bit_counter;
+	size_t	i;
+	int		bit_counter;
 
-	i=0;
-	while(i <= len)
+	i = 0;
+	while (i <= len)
 	{
-		bit_counter=0;
-		while(bit_counter < 7)
+		bit_counter = 0;
+		while (bit_counter < 7)
 		{
 			if (((str[i] >> bit_counter) & 1) == 1)
-				kill(n_pid,SIGUSR1);
+				kill(n_pid, SIGUSR1);
 			else
-				kill(n_pid,SIGUSR2);
+				kill(n_pid, SIGUSR2);
 			bit_counter++;
 		}
 		i++;
 	}
-
 }
-
 
 int	main(int argc, char **argv)
 {
