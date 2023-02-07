@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/06 15:55:00 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:15:36 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	bit_to_server(char *str, int n_pid, size_t len)
 				kill(n_pid, SIGUSR1);
 			else
 				kill(n_pid, SIGUSR2);
+			usleep(200);
 			bit_counter++;
 		}
 		i++;
