@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/02 15:45:02 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:32:16 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	signal_handler(int bit)
 	bit_counter++;
 	if (bit == 8)
 	{
-		printf("%c", ch);
+		ft_printf("%c", ch);
 		ch = 0;
 		bit_counter = 0;
 	}

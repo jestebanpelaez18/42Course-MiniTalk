@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/06 17:15:36 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:10:25 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ void	bit_to_server(char *str, int n_pid, size_t len)
 	int		bit_counter;
 
 	i = 0;
-	while (i <= len)
+	while (i < len)
 	{
 		bit_counter = 0;
-		while (bit_counter < 7)
+		while (bit_counter < 8)
 		{
-			if (((str[i] >> bit_counter) & 1) == 1)
+			if ((str[i] >> bit_counter) & 1)
 				kill(n_pid, SIGUSR1);
 			else
 				kill(n_pid, SIGUSR2);
-			usleep(200);
+			usleep(300);
 			bit_counter++;
 		}
 		i++;
