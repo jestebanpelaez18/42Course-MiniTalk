@@ -29,7 +29,7 @@ int	print_string(char *s)
 	int	len_s;
 
 	len_s = 0;
-	if (s == '\0')
+	if (s == NULL)
 	{
 		ft_putstr_fd("(null)", 1);
 		len_s = 6;

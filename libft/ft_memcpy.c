@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	array_src = src;
 	if (n == 0 || array_dst == array_src)
 		return ((char *)array_dst);
-	if (array_dst == '\0' && array_src == '\0')
+	if (array_dst == NULL && array_src == NULL)
 		return (NULL);
 	while (i < n)
 	{

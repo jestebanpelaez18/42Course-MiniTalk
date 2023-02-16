@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 
 	len = ft_digit_len(n);
 	s = (char *)malloc(sizeof(char) * (len + 1));
-	if (s == '\0')
+	if (s == NULL)
 		return (0);
 	s[len] = '\0';
 	len--;

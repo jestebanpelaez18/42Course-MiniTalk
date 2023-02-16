@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jestebanpelaez <jestebanpelaez@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/09 19:10:25 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:15:39 by jestebanpel      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,12 @@ void	bit_to_server(char *str, int n_pid, size_t len)
 				kill(n_pid, SIGUSR1);
 			else
 				kill(n_pid, SIGUSR2);
-			usleep(300);
+			usleep(150);
 			bit_counter++;
 		}
 		i++;
 	}
+	
 }
 
 int	main(int argc, char **argv)
@@ -44,6 +45,7 @@ int	main(int argc, char **argv)
 		pid = ft_atoi(argv[1]);
 		str = argv[2];
 		bit_to_server(str, pid, ft_strlen(str));
+		bit_to_server("\n", pid, ft_strlen("\n"));
 	}
 	else
 		ft_printf("Just write the PID and the message as arguments \n");

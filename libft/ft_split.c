@@ -63,14 +63,12 @@ char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	int		len;
-	int		i;
 
-	if (s == '\0')
+	if (s == NULL)
 		return (0);
-	i = 0;
 	len = ft_numwords(s, c);
 	split = (char **)malloc(sizeof(char *) * (len + 1));
-	if (split == '\0')
+	if (split == NULL)
 		return (0);
 	ft_writesplit(split, s, c, len);
 	return (split);

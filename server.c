@@ -22,7 +22,7 @@ void	signal_handler(int bit)
 		ch = ch | (1 << bit_counter);
 	}
 	bit_counter++;
-	if (bit == 8)
+	if (bit_counter == 8)
 	{
 		ft_printf("%c", ch);
 		ch = 0;
@@ -32,8 +32,8 @@ void	signal_handler(int bit)
 
 int	main(void)
 {
-	ft_printf("Bienevenido a mi Server");
-	ft_printf("My server PID is: %d", getpid());
+	ft_printf("Bienvenido a mi Server \n");
+	ft_printf("My server PID is: %d \n", getpid());
 	while (1)
 	{
 		signal(SIGUSR1, signal_handler);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jestebanpelaez <jestebanpelaez@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:44:14 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/09 18:32:33 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:12:52 by jestebanpel      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 # include <signal.h>
 # include <unistd.h>
-// # include <stdio.h>
-// # include <stdlib.h>
-// # include <string.h>
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 

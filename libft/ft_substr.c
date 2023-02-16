@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	size_t	space;
 
-	if (s == '\0')
+	if (s == NULL)
 		return (0);
 	i = start;
 	space = start;
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		*s2 = '\0';
 		return (s2);
 	}
-	if (s2 == '\0')
+	if (s2 == NULL)
 		return (0);
 	while (s[i] != '\0' && i < len + space)
 		s2[j++] = s[i++];

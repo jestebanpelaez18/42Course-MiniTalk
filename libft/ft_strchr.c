@@ -15,10 +15,8 @@
 char	*ft_strchr(const char *str, int c)
 {
 	char	*array;
-	int		i;
 
 	array = (char *)str;
-	i = 0;
 	while (*array != (unsigned char)c && *array != '\0')
 	{
 		array++;
