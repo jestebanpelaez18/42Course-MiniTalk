@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/02/09 18:32:16 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/03/31 16:48:55 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	signal_handler(int bit)
 	static int	bit_counter;
 
 	if (bit == SIGUSR1)
-	{
 		ch = ch | (1 << bit_counter);
-	}
 	bit_counter++;
 	if (bit_counter == 8)
 	{
