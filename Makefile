@@ -6,7 +6,7 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 15:57:04 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/03/24 15:42:19 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/04/03 14:24:17 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ LFLAGS = -L $(LIBFT_DIR) -L$(PRINTF_DIR) -l ft -l ftprintf
 IFLAGS = -I $(HEADER)
 FLAGS = -Wall -Wextra -Werror
 
-CC = clang
+CC = cc
 MAKE = make
 
 all: $(SERVER) $(CLIENT) $(LIBFT) $(PRINTF)
