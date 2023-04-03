@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/03 14:27:47 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/03 14:32:58 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ int	main(int argc, char **argv)
 	}
 	else
 		ft_printf("Just write the PID and the message as arguments \n");
+	return (0);
 }
