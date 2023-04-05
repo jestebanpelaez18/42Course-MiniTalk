@@ -6,16 +6,22 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/03/31 16:48:55 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:13:42 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
+void	get_str(char *str, char c)
+{
+	
+}
+
 void	signal_handler(int bit)
 {
 	static int	ch;
 	static int	bit_counter;
+	static char	*str;
 
 	if (bit == SIGUSR1)
 		ch = ch | (1 << bit_counter);
