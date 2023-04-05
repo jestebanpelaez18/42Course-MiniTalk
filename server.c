@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/05 15:23:20 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:42:41 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*get_str(char *str, char c)
 	if (str == NULL)
 		return (0);
 	i = 0;
-	s2 = (char *)malloc(sizeof(char) * ft_strlen(s2) + 1);
+	s2 = (char *)malloc(sizeof(char) * ft_strlen(str) + 2);
 	if (s2 == NULL)
 		return (0);
 	while (str[i] != '\0')
@@ -45,9 +45,15 @@ void	signal_handler(int bit)
 	bit_counter++;
 	if (bit_counter == 8)
 	{
-		ft_printf("%c", ch);
-		ch = 0;
-		bit_counter = 0;
+		if (ch)
+			str = get_str(str, ch);
+		else
+		{
+			ft_printf("%s", str);
+			ch = 0;
+			bit_counter = 0;
+			free(str);
+		}
 	}
 }
 
