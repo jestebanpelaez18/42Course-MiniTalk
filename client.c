@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/03 14:32:58 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/07 16:42:49 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	bit_to_server(char *str, int n_pid, size_t len)
 	int		bit_counter;
 
 	i = 0;
-	while (i < len)
+	bit_counter = 0;
+	while (i <= len)
 	{
-		bit_counter = 0;
 		while (bit_counter < 8)
 		{
 			if ((str[i] >> bit_counter) & 1)
@@ -30,6 +30,7 @@ void	bit_to_server(char *str, int n_pid, size_t len)
 			usleep(100);
 			bit_counter++;
 		}
+		bit_counter = 0;
 		i++;
 	}
 }
@@ -44,7 +45,7 @@ int	main(int argc, char **argv)
 		pid = ft_atoi(argv[1]);
 		str = argv[2];
 		bit_to_server(str, pid, ft_strlen(str));
-		bit_to_server("\n\n", pid, ft_strlen("\n\n"));
+		// bit_to_server("\n\n", pid, ft_strlen("\n\n"));
 	}
 	else
 		ft_printf("Just write the PID and the message as arguments \n");

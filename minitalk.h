@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:44:14 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/03/21 15:00:30 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/06 17:11:23 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include "libft/libft.h"
 # include <signal.h>
 # include <unistd.h>
+# include <stdio.h>
 
 #endif
