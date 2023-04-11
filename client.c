@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/07 16:42:49 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:28:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,13 @@ int	main(int argc, char **argv)
 	if (argc == 3)
 	{
 		pid = ft_atoi(argv[1]);
+		if (pid == 0)
+		{
+			ft_putendl_fd("Error", 1);
+			exit(1);
+		}
 		str = argv[2];
 		bit_to_server(str, pid, ft_strlen(str));
-		// bit_to_server("\n\n", pid, ft_strlen("\n\n"));
 	}
 	else
 		ft_printf("Just write the PID and the message as arguments \n");

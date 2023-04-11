@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/07 16:37:09 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:19:01 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static char	*get_str(char *str, char c)
 	if (s2 == NULL)
 		return (0);
 	i = 0;
-	if(!str)
+	if (!str)
 	{
 		s2[i] = c;
-		s2[i+1] = 0;
+		s2[i + 1] = 0;
 	}
 	else
 	{
@@ -34,7 +34,7 @@ static char	*get_str(char *str, char c)
 			i++;
 		}
 		s2[i] = c;
-		s2[i+1] = 0;
+		s2[i + 1] = 0;
 		free(str);
 	}
 	return (s2);
@@ -57,9 +57,9 @@ void	signal_handler(int bit)
 			str = get_str(str, ch);
 		else
 		{
-			ft_putendl_fd(str,1);
+			ft_putendl_fd(str, 1);
 			free(str);
-			str = NULL;			
+			str = NULL;
 		}
 		ch = 0;
 		bit_counter = 0;
