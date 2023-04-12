@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:16:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/04/11 14:19:01 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/04/12 13:36:59 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ static char	*get_str(char *str, char c)
 
 void	signal_handler(int bit)
 {
-	static int	ch;
-	static int	bit_counter;
-	static char	*str;
+	static int	ch = 0;
+	static int	bit_counter = 0;
+	static char	*str = NULL;
 
 	if (str == NULL)
 		str = ft_strdup("");
